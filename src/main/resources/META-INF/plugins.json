@@ -1,0 +1,28 @@
+{
+    "plugins": [
+        {
+            "loader": "java_plain",
+            "id": "soaked-light",
+            "name": "SoakedLight",
+            "version": "1.0.0-SNAPSHOT",
+            "main-class": "com.expansemc.soakedlight.SoakedLight",
+            "description": "StarLight ported to Sponge.",
+            "links": {
+                "source": "https://github.com/ExpanseMC/SoakedLight",
+                "issues": "https://github.com/ExpanseMC/SoakedLight/issues"
+            },
+            "contributors": [
+                {
+                    "name": "doot",
+                    "description": "Lead Developer"
+                }
+            ],
+            "dependencies": [
+                {
+                    "id": "spongeapi",
+                    "version": "8.0.0"
+                }
+            ]
+        }
+    ]
+}
