@@ -37,7 +37,7 @@ tasks {
         manifest {
             attributes(
                 "Access-Widener" to "starlight.accesswidener",
-                "MixinConfigs" to "mixins.starlight.json"
+                "MixinConfigs" to "starlight.mixins.json"
             )
         }
     }
