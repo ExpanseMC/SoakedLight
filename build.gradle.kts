@@ -6,6 +6,11 @@ plugins {
 group = "com.expansemc"
 version = "1.0-SNAPSHOT"
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
 repositories {
     mavenCentral()
     maven("https://repo.spongepowered.org/repository/maven-public/")
