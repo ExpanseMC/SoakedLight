@@ -4,7 +4,7 @@
             "loader": "java_plain",
             "id": "soaked-light",
             "name": "SoakedLight",
-            "version": "1.0.0-SNAPSHOT",
+            "version": "0.1.0",
             "main-class": "com.expansemc.soakedlight.SoakedLight",
             "description": "StarLight ported to Sponge.",
             "links": {
