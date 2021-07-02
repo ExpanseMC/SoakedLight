@@ -5,6 +5,8 @@ import ca.spottedleaf.starlight.common.chunk.ExtendedChunkSection;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.LevelChunkSection;
 import net.minecraft.world.level.chunk.PalettedContainer;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -29,7 +31,7 @@ public abstract class LevelChunkSectionMixin implements ExtendedChunkSection {
 
     @Unique
     private static long getKnownTransparency(final BlockState state) {
-        final int opacityIfCached = ((ExtendedAbstractBlockState)state).getOpacityIfCached();
+        final int opacityIfCached = ((ExtendedAbstractBlockState) state).getOpacityIfCached();
 
         if (opacityIfCached == 0) {
             return ExtendedChunkSection.BLOCK_IS_TRANSPARENT;
@@ -87,7 +89,7 @@ public abstract class LevelChunkSectionMixin implements ExtendedChunkSection {
      * Callback used to initialise the transparency data clientside. This is only for the client side as
      * calculateCounts is called server side, and fromPacket is only used clientside.
      */
-//    @Environment(EnvType.CLIENT) // TODO(doot): ?
+    @OnlyIn(Dist.CLIENT)
     @Inject(
             method = "read",
             at = @At("RETURN")
